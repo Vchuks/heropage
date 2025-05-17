@@ -11,9 +11,8 @@ body {
 }
 
 .parent-container {
-  /* width: 100%; */
   display: flex;
-  /* background-color: blue; */
+  
 }
 
 .left-container {
@@ -24,7 +23,6 @@ body {
 
 .right-container {
   width: 40%;
-  background-color: #1e0e62;
 }
 
 .person-image {
@@ -35,14 +33,17 @@ body {
 }
 
 .brand-title {
+  width: 100%;
   color: #1e0e62;
   font-weight: 700;
   font-size: 24px;
 }
 
 header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
@@ -51,8 +52,11 @@ nav a {
   font-weight: 500px;
 }
 nav {
+  width: 100%;
   display: flex;
   gap: 1.8rem;
+    justify-content: flex-end;
+
 }
 
 .big-text {
@@ -99,3 +103,74 @@ nav {
   color: #15143966;
   padding-top: 10px;
 }
+
+@media (min-width:1023px) and (max-width: 1025px) {
+  .person-image{
+    object-position: top right;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 912px) {
+  .parent-container{
+    flex-direction: column;
+  }
+
+  .left-container{
+    padding: 2rem;
+    width: 100%;
+  }
+  .right-container{
+    width: 100%;
+  }
+
+  nav{
+    justify-content: flex-end;
+  }
+
+  .small-text{
+    width: 400px;
+    line-height: 30px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  .parent-container{
+    flex-direction: column;
+  }
+
+  .left-container{
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav{
+    justify-content: flex-end;
+  }
+
+  .big-text{
+    width: 100%;
+    font-size: 35px;
+    padding-top: 20px;
+  }
+
+  .small-text{
+    width: 100%;
+    text-align: justify;
+  }
+  .button-one, .button-two{
+    padding: 10px;
+  }
+
+  .sign{
+    font-size: 14px;
+  }
+
+  .right-container{
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
